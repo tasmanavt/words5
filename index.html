@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Yandex Games SDK -->
+    <script src="https://yandex.ru/games/sdk/v2"></script>
+    <title>word5JS</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Угадай слово</h1>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="button-row">
+        <button id="check-btn" disabled>Проверить</button>
+      </div>
+      <div class="keyboard">
+        <div class="keyboard-row">
+          <div class="keyboard-cell">Й</div>
+          <div class="keyboard-cell">Ц</div>
+          <div class="keyboard-cell">У</div>
+          <div class="keyboard-cell">К</div>
+          <div class="keyboard-cell">Е</div>
+          <div class="keyboard-cell">Н</div>
+          <div class="keyboard-cell">Г</div>
+          <div class="keyboard-cell">Ш</div>
+          <div class="keyboard-cell">Щ</div>
+          <div class="keyboard-cell">З</div>
+          <div class="keyboard-cell">Х</div>
+          <div class="keyboard-cell">Ъ</div>
+        </div>
+        <div class="keyboard-row">
+          <div class="keyboard-cell">Ф</div>
+          <div class="keyboard-cell">Ы</div>
+          <div class="keyboard-cell">В</div>
+          <div class="keyboard-cell">А</div>
+          <div class="keyboard-cell">П</div>
+          <div class="keyboard-cell">Р</div>
+          <div class="keyboard-cell">О</div>
+          <div class="keyboard-cell">Л</div>
+          <div class="keyboard-cell">Д</div>
+          <div class="keyboard-cell">Ж</div>
+          <div class="keyboard-cell">Э</div>
+          <div class="keyboard-cell">Ё</div>
+        </div>
+        <div class="keyboard-row">
+          <div class="keyboard-cell none"></div>
+          <div class="keyboard-cell">Я</div>
+          <div class="keyboard-cell">Ч</div>
+          <div class="keyboard-cell">С</div>
+          <div class="keyboard-cell">М</div>
+          <div class="keyboard-cell">И</div>
+          <div class="keyboard-cell">Т</div>
+          <div class="keyboard-cell">Ь</div>
+          <div class="keyboard-cell">Б</div>
+          <div class="keyboard-cell">Ю</div>
+          <div class="keyboard-cell none"></div>
+        </div>
+        <div class="keyboard-row centerdel">
+          <div class="delete">Удалить</div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script>
+      YaGames.init().then((ysdk) => {
+        console.log("Yandex SDK initialized");
+        window.ysdk = ysdk;
+      });
+
+      ysdk.adv.showFullscreenAdv({
+        callbacks: {
+          onClose: function (wasShown) {
+            // some action after close
+          },
+          onError: function (error) {
+            // some action on error
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

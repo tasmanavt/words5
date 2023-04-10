@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.cell {
+  width: calc(20% - 4px);
+  height: 50px;
+  background-color: #f2f2f2;
+  border: 2px solid #c4c4c4;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#check-btn {
+  width: 200px;
+  height: 50px;
+  background-color: #c4c4c4;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#check-btn:disabled {
+  background-color: #f2f2f2;
+  color: #c4c4c4;
+  cursor: not-allowed;
+}
+#check-btn:not(:disabled) {
+  background-color: #32cd32;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.keyboard-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.keyboard-cell {
+  width: calc(8.33% - 4px);
+  height: 50px;
+  background-color: #f2f2f2;
+  border: 2px solid #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.delete {
+  width: calc(25% - 4px);
+  height: 50px;
+  background-color: #ff6347;
+  border: 2px solid #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background-color: #ff473e;
+}
+
+.delete:active {
+  background-color: #d93a30;
+}
+
+.none {
+  opacity: 0;
+}
+.centerdel {
+  justify-content: center;
+}
+
+.row:nth-child(2) .cell {
+  opacity: 1;
+}
+
+.row:nth-child(3) .cell,
+.row:nth-child(4) .cell,
+.row:nth-child(5) .cell,
+.row:nth-child(6) .cell {
+  opacity: 0.5;
+}
